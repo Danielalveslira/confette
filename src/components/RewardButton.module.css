@@ -1,0 +1,57 @@
+.btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.12s, box-shadow 0.15s;
+  width: 100%;
+  min-height: 110px;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+  box-shadow: none;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Anel sutil enquanto anima */
+.firing {
+  border-color: #111 !important;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.06) !important;
+}
+
+.icon {
+  font-size: 26px;
+  line-height: 1;
+  pointer-events: none;
+  transition: transform 0.15s;
+}
+
+.btn:hover:not(:disabled) .icon {
+  transform: scale(1.1);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
+  pointer-events: none;
+}
